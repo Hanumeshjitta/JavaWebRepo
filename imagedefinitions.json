@@ -1,6 +1,6 @@
 [
     {
-        "name": "214472130589.dkr.ecr.us-east-1.amazonaws.com/helloworld:latest",
+        "name": "javaweb",
         "imageUri": "214472130589.dkr.ecr.us-east-1.amazonaws.com/helloworld:latest"
     }
 ]
