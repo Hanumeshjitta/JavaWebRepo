@@ -33,12 +33,6 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - mkdir appfiles
-      - cd appfiles
-      - cp ../target/JavaWeb.war .
-      - cp ../imagedefinitions.json .
-      - ls -al
-      - tar -zcvf ../target/JavaWeb.tar.gz *.*
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
@@ -46,5 +40,5 @@ phases:
 #      - printf '[{"name":"helloworld","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
   files:
-#    - imagedefinitions.json
-#    - target/JavaWeb.war
+    - imagedefinitions.json
+    - target/JavaWeb.war
