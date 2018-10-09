@@ -1,6 +1,6 @@
 [
     {
-        "name": "helloworld",
+        "name": "demo-cluster",
         "imageUri": "214472130589.dkr.ecr.us-east-1.amazonaws.com/helloworld:latest"
     }
 ]
