@@ -16,7 +16,7 @@ phases:
       - echo $AWS_DEFAULT_REGION
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
       - echo Amazon ECR login successfull...
-      - REPOSITORY_URI=214472130589.dkr.ecr.us-east-1.amazonaws.com/helloworld
+      - REPOSITORY_URI=214472130589.dkr.ecr.us-east-1.amazonaws.com/aricent-image-repo
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
@@ -34,9 +34,12 @@ phases:
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-#      - echo Writing image definitions file...
-#      - printf '[{"name":"helloworld","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - echo Writing image definitions file...
+      - printf '[{"name":"aricent-container-dev","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions_dev.json
+      - printf '[{"name":"aricent-container-qa","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions_qa.json
+      - printf '[{"name":"aricent-container-prod","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions_prod.json
 artifacts:
   files:
-    - imagedefinitions.json
-    - target/JavaWeb.war
+    - imagedefinitions_dev.json
+    - imagedefinitions_qa.json
+    - imagedefinitions_prod.json
