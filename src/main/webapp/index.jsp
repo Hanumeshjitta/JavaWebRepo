@@ -23,7 +23,7 @@
 <body>
 
 <div class="jumbotron text-center">
-  <h1 class="heading">AWS - DevOps</h1>
+  <h1 class="heading">AWS - DevOps 2.0</h1>
   <p>CI/CD Pipeline for Deploying Containers using AWS Developer Tools</p> 
 </div>
   
