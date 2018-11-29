@@ -15,15 +15,12 @@
 		padding:5px;
 		height: 125px;
 	}
-	.heading {
-		color:red;
-	}
   </style>
 </head>
 <body>
 
 <div class="jumbotron text-center">
-  <h1 class="heading">AWS - DevOps 2.0</h1>
+  <h1>AWS - DevOps</h1>
   <p>CI/CD Pipeline for Deploying Containers using AWS Developer Tools</p> 
 </div>
   
