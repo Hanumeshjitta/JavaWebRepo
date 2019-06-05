@@ -35,9 +35,9 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '[{"name":"aricent-container-dev","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_dev.json
-      - printf '[{"name":"aricent-container-qa","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_qa.json
-      - printf '[{"name":"aricent-container-prod","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_prod.json
+      - printf '[{"name":"container-dev","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_dev.json
+      - printf '[{"name":"container-qa","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_qa.json
+      - printf '[{"name":"container-prod","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_prod.json
 artifacts:
   files:
     - imagedefinitions_dev.json
