@@ -21,7 +21,7 @@
 
 <div class="jumbotron text-center">
   <h1>AWS - DevOps - Containers</h1>
-  <p>CI/CD Pipeline for Deploying Containers using AWS Developer Tools 2.0</p> 
+  <p>CI/CD Pipeline for Deploying Containers using AWS Developer Tools 2.5</p> 
 </div>
   
 <div class="container">
