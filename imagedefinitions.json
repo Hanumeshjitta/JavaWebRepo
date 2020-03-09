@@ -1,6 +1,7 @@
 [
     {
         "name": "helloworld-container",
-        "imageUri": "214472130589.dkr.ecr.us-east-1.amazonaws.com/helloworld:latest"
+       # "imageUri": "214472130589.dkr.ecr.us-east-1.amazonaws.com/helloworld:latest"
+        "imageUri": "https://codedeploy-install.s3.amazonaws.com/Capture.JPG"
     }
 ]
