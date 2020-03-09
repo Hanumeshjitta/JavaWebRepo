@@ -1,3 +1,3 @@
 FROM tomcat:jre8
-MAINTAINER Kishore Reddipalli
+MAINTAINER Hanumesh Jitta
 COPY target/JavaWeb.war /usr/local/tomcat/webapps/
