@@ -43,5 +43,5 @@ phases:
 artifacts:
   files:
     - imagedefinitions_dev.json
-    - imagedefinitions_qa.json
+    - imagedefinitions_qa.json 
     - imagedefinitions_prod.json
