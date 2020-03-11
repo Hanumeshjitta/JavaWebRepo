@@ -19,7 +19,7 @@ phases:
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
       - echo Amazon ECR login successfull...
       - REPOSITORY_URI=749088078640.dkr.ecr.us-east-1.amazonaws.com/ecr-cms-devops
-      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7) 
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
     commands:
