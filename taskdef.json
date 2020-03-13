@@ -63,7 +63,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-west-2:749088078640:task-definition/cms-devops-TaskDef:6",
+  "taskDefinitionArn": "arn:aws:ecs:us-west-2:749088078640:task-definition/cms-devops-TaskDef:latest",
   "family": "cms-devops-TaskDef",
   "requiresAttributes": [
     {
