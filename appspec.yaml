@@ -7,3 +7,17 @@ Resources:
         LoadBalancerInfo:
           ContainerName: "cms-devops-Container"
           ContainerPort: 8080
+
+
+
+--- 
+Resources: 
+  - 
+    TargetService: 
+      Properties: 
+        LoadBalancerInfo: 
+          ContainerName: check-Container
+          ContainerPort: "9090"
+        TaskDefinition: <TASK_DEFINITION>
+      Type: "AWS::ECS::Service"
+version: 0.0
