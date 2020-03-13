@@ -37,11 +37,15 @@ phases:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '[{"name":"container-dev","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_dev.json
-      - printf '[{"name":"container-qa","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_qa.json
-      - printf '[{"name":"container-prod","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_prod.json
+      #- printf '[{"name":"container-dev","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_dev.json
+      #- printf '[{"name":"container-qa","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_qa.json
+      #- printf '[{"name":"container-prod","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions_prod.json
+       - printf '{"ImageURI":"%s"}' 749088078640.dkr.ecr.us-west-2.amazonaws.com/cms-devops-ecrrepo:$IMAGE_TAG > imageDetail.json
+       - cat imageDetail.json
 artifacts:
   files:
-    - imagedefinitions_dev.json
-    - imagedefinitions_qa.json 
-    - imagedefinitions_prod.json
+    #- imagedefinitions_dev.json
+    #- imagedefinitions_qa.json 
+    #- imagedefinitions_prod.json
+     - appspec.yaml
+     - imageDetail.json
